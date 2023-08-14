@@ -5,6 +5,7 @@ import 'package:ticket_system/screens/hotel_screen.dart';
 import 'package:ticket_system/screens/ticket_view.dart';
 import 'package:ticket_system/utils/app_info_list.dart';
 import 'package:ticket_system/utils/app_styles.dart';
+import 'package:ticket_system/widgets/double_text_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -81,25 +82,9 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const Gap(40),
                 //upcoming flight
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoming Flights",
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        print("You are tapped");
-                      },
-                      child: Text(
-                        "View all",
-                        style: Styles.textStyle.copyWith(
-                          color: Styles.primaryColor,
-                        ),
-                      ),
-                    ),
-                  ],
+                const AppDoubleTextWidget(
+                  bigText: "Upcoming Flights",
+                  smallText: "View all",
                 ),
               ],
             ),
@@ -125,25 +110,9 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               horizontal: 20,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                  onTap: () {
-                    print("You are tapped");
-                  },
-                  child: Text(
-                    "All",
-                    style: Styles.textStyle.copyWith(
-                      color: Styles.primaryColor,
-                    ),
-                  ),
-                ),
-              ],
+            child: const AppDoubleTextWidget(
+              bigText: "Hotels",
+              smallText: "View all",
             ),
           ),
           const Gap(15),
